@@ -1,8 +1,9 @@
 #!/bin/bash
-if [ ! -d "$WORKSPACE_DIR/test-instance2" ]; then
-  "$DIRECTORY not found -> FAIL" > check.log
+OUTPUT_DIR="$WORKSPACE_DIR/test-instance2"
+if [ ! -d "$OUTPUT_DIR" ]; then
+  "$OUTPUT_DIR not found -> FAIL" > check.log
   exit 1
 fi
 
 pip install GPUtil
-python "$WORKSPACE_DIR/test-instance/check_instance.py"
+python "$OUTPUT_DIR/check_instance.py"
