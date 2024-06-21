@@ -1,3 +1,3 @@
 #!/bin/bash
 pip install GPUtil
-python check_instance.py
+python "$WORKSPACE_DIR/test-instance/check_instance.py"
